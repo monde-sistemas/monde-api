@@ -1,4 +1,4 @@
-# Documentação da API do Monde Web
+# Documentação da API do Monde
 
 ## Autenticação
 
