@@ -2,6 +2,13 @@
 
 Endereço da API: https://web.monde.com.br
 
+Deve ser adicionado o content type JSON ao Header da requisição:
+
+```
+Content-Type: application/json; charset=utf-8
+```
+
+
 ## Autenticação
 
 É realizada por token (JWT), seguindo a RFC 7591.
