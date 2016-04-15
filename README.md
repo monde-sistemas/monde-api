@@ -30,7 +30,8 @@ Caso a autenticação ocorra sem problemas, é retornado o token de acesso:
 
 ```
 {
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
+  "user_id": "{093480A5-DB9B-4516-A0DE-640CBAFE5DD2}"
 }
 ```
 
