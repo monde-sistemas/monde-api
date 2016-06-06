@@ -55,7 +55,7 @@ Esse método retorna uma lista de pessoas cadastradas:
     {
       "id": "{338A833A-FE18-410E-9D31-8A8B9FBE4231}",
         "name": "Admin",
-        "city": "Americana",
+        "city_name": "Americana",
         "company_name": "Company One",
         "address": "1st Street",
         "number": "899",
@@ -127,7 +127,7 @@ Para criar um novo cadastro de pessoa envie o json no seguinte formato:
 {
   "person": {
     "name": "Admin",
-    "city": "Americana",
+    "city_name": "Americana",
     "company_name": "Company One",
     "address": "1st Street",
     "number": "899",
@@ -165,12 +165,10 @@ Caso algum erro de validação ocorra, será retornado o seguinte JSON:
 ```
 {
   errors: {
-    name: [
-      "não pode ficar em branco",
-      "deve conter ao menos 6 dígitos"
-    ],
-    cpf: [
-      "campo inválido"
+    [
+      "Nome não pode ficar em branco",
+      "Nome deve conter ao menos 6 dígitos",
+      "CPF é inválido"
     ]
   }
 }
@@ -184,7 +182,7 @@ A alteração de cadastro é realizado enviando o seguinte JSON no corpo da requ
 {
   "person": {
     "name": "Admin",
-    "city": "Americana",
+    "city_name": "Americana",
     "company_name": "Company One",
     "address": "1st Street",
     "number": "899",
@@ -222,12 +220,10 @@ Caso algum erro de validação ocorra, será retornado o seguinte JSON:
 ```
 {
   errors: {
-    name: [
-      "não pode ficar em branco",
-      "deve conter ao menos 6 dígitos"
-    ],
-    cpf: [
-      "campo inválido"
+    [
+      "Nome não pode ficar em branco",
+      "Nome deve conter ao menos 6 dígitos",
+      "CPF é inválido"
     ]
   }
 }
@@ -241,7 +237,7 @@ Busca uma pessoa pelo seu código identificador, retornando o seguinte JSON:
 {
   "person": {
     "name": "Admin",
-    "city": "Americana",
+    "city_name": "Americana",
     "company_name": "Company One",
     "address": "1st Street",
     "number": "899",
