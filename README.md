@@ -35,9 +35,9 @@ Caso a autenticação ocorra sem problemas, é retornado o token de acesso:
 }
 ```
 
-- Status code será: `200 OK`.
-- Status code de não autenticação: `401 Unauthorized`. Esse código será retornado caso houver erro de autenticação e tentativa de acesso sem autenticação em algum método protegido da API.
-- Tempo de vida do token: `uma hora`.
+- Status code será: `200 OK`
+- Status code de não autenticação: `401 Unauthorized`. Esse código será retornado caso houver erro de autenticação e tentativa de acesso sem autenticação em algum método protegido da API
+- Tempo de vida do token: `uma hora`
 
 Para fazer uma requisição autenticada para a API, é necessário passar o token no header da requisição:
 
@@ -157,7 +157,8 @@ Para criar um novo cadastro de pessoa envie o json no seguinte formato:
 }
 ```
 
-- Status code de criação: `201 Created`.
+- Status code de criação: `201 Created`
+- A resposta contém o cadastro criado
 - Status code de erro de validação: `422 Unprocessable Entity`
 
 Caso algum erro de validação ocorra, será retornado o seguinte JSON:
@@ -212,7 +213,8 @@ A alteração de cadastro é realizado enviando o seguinte JSON no corpo da requ
 }
 ```
 
-- Status code de alteração: `204 No Content`
+- Status code de alteração: `200 Ok`
+- A resposta contém o cadastro alterado
 - Status code de erro de validação: `422 Unprocessable Entity`
 
 Caso algum erro de validação ocorra, será retornado o seguinte JSON:
