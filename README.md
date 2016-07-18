@@ -1,6 +1,6 @@
 # Documentação da API do Monde
 
-Endereço da API: https://web.monde.com.br
+Endereço da API: https://web.monde.com.br/api
 
 Deve ser adicionado o content type JSON ao Header da requisição:
 
@@ -8,273 +8,30 @@ Deve ser adicionado o content type JSON ao Header da requisição:
 Content-Type: application/json; charset=utf-8
 ```
 
+## Endpoints
 
-## Autenticação
+### v1
 
-É realizada por token (JWT), seguindo a RFC 7591.
+#### Autenticação
+- **[<code>POST</code> auth/auth_token](v1/authentication/POST_auth_token.md)**
 
-## POST /api/v1/auth/auth_token
+#### Pessoas
+- **[<code>GET</code> people](v1/people/GET_people.md)**
+- **[<code>GET</code> people/:id](v1/people/GET_people_show.md)**
+- **[<code>POST</code> people](v1/people/POST_people.md)**
+- **[<code>PUT</code> people/:id](v1/people/PUT_people_edit.md)**
+- **[<code>DELETE</code> people/:id](v1/people/DELETE_people.md)**
 
-Esse método autentica o usuário e retorna o token de acesso caso o acesso seja válido, o request deve ter o seguinte formato:
 
-```
-{
-  "auth": {
-    "login": "usuário@endereco.monde.com.br",
-    "password": "senha"
-  }
-}
-```
+#### Tarefas
+- **[<code>GET</code> tasks](v1/tasks/GET_tasks.md)**
+- **[<code>GET</code> tasks/:id](v1/tasks/GET_tasks_show.md)**
+- **[<code>POST</code> tasks](v1/tasks/POST_tasks.md)**
+- **[<code>PUT</code> tasks/:id](v1/tasks/PUT_tasks_edit.md)**
+- **[<code>DELETE</code> tasks/:id](v1/tasks/DELETE_tasks.md)**
 
-Caso a autenticação ocorra sem problemas, é retornado o token de acesso:
+#### Categorias de Tarefas
+- **[<code>GET</code> category_tasks]()**
 
-```
-{
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
-  "user_id": "{093480A5-DB9B-4516-A0DE-640CBAFE5DD2}"
-}
-```
-
-- Status code será: `200 OK`
-- Status code de não autenticação: `401 Unauthorized`. Esse código será retornado caso houver erro de autenticação e tentativa de acesso sem autenticação em algum método protegido da API
-- Tempo de vida do token: `uma hora`
-
-Para fazer uma requisição autenticada para a API, é necessário passar o token no header da requisição:
-
-```
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
-```
-
-## GET /api/v1/people
-
-Esse método retorna uma lista de pessoas cadastradas:
-
-```
-{
-  "people": [
-    {
-      "id": "{338A833A-FE18-410E-9D31-8A8B9FBE4231}",
-        "name": "Admin",
-        "city_name": "Americana",
-        "company_name": "Company One",
-        "address": "1st Street",
-        "number": "899",
-        "complement": "Casa",
-        "district": "St. John",
-        "zip": "89999000",
-        "birth_date": "2016-04-05",
-        "cpf": null,
-        "rg": null,
-        "passport_number": null,
-        "passport_expiration": null,
-        "gender": null,
-        "business_phone": "49368990000",
-        "home_phone": "4936222190",
-        "mobile_phone": "4991782812",
-        "cnpj": "74982815000150",
-        "state_inscription": "1234567890",
-        "city_inscription": "1234567890",
-        "phone": null,
-        "fax": null,
-        "email": "usuario@monde.com.br",
-        "website": "https://www.site.com.br",
-        "observations": "nothing to note",
-        "registered_at": "2016-04-05T10:52:59.978-03:00",
-        "registered_by": "{338A833A-FE18-410E-9D31-8A8B9FBE4231}",
-        "image": null,
-        "type": "J"
-    }
-  ],
-  "meta": {
-    "pagination": {
-      "per_page": 1,
-      "total_pages": 4,
-      "total_objects": 4
-    }
-  }
-}
-```
-
-- Status code de sucesso: `200 OK`
-
-### Filtro
-
-Para filtrar alguma pessoa por nome, cpf, razão social ou cnpj:
-
-```
-/api/v1/people?filter=valor-pesquisa
-```
-
-### Paginação
-
-Para utilizar a paginação, utilize a chave `page` na paginação:
-
-```
-/api/v1/people?page=1
-```
-
-Para sobrescrever o valor padrão(50) de registros por página, utilize a chave `per_page` na query:
-
-```
-/api/v1/people?page=1&per_page=5
-```
-
-## POST /api/v1/people
-
-Para criar um novo cadastro de pessoa envie o json no seguinte formato:
-
-```
-{
-  "person": {
-    "name": "Admin",
-    "city_name": "Americana",
-    "company_name": "Company One",
-    "address": "1st Street",
-    "number": "899",
-    "complement": "Casa",
-    "district": "St. John",
-    "zip": "89999000",
-    "birth_date": "2016-04-05",
-    "cpf": null,
-    "rg": null,
-    "passport_number": null,
-    "passport_expiration": null,
-    "gender": null,
-    "business_phone": "49368990000",
-    "home_phone": "4936222190",
-    "mobile_phone": "4991782812",
-    "cnpj": "74982815000150",
-    "sate_inscription": "1234567890",
-    "city_inscription": "1234567890",
-    "phone": null,
-    "fax": null,
-    "email": "usuario@monde.com.br",
-    "website": "https://www.site.com.br",
-    "observations": "nothing to note",
-    "image": null,
-    "type": "J"
-  }
-}
-```
-
-- Status code de criação: `201 Created`
-- A resposta contém o cadastro criado
-- Status code de erro de validação: `422 Unprocessable Entity`
-
-Caso algum erro de validação ocorra, será retornado o seguinte JSON:
-
-```
-{
-  errors: {
-    [
-      "Nome não pode ficar em branco",
-      "Nome deve conter ao menos 6 dígitos",
-      "CPF é inválido"
-    ]
-  }
-}
-```
-
-## PUT /api/v1/people/:id
-
-A alteração de cadastro é realizado enviando o seguinte JSON no corpo da requisição:
-
-```
-{
-  "person": {
-    "name": "Admin",
-    "city_name": "Americana",
-    "company_name": "Company One",
-    "address": "1st Street",
-    "number": "899",
-    "complement": "Casa",
-    "district": "St. John",
-    "zip": "89999000",
-    "birth_date": "2016-04-05",
-    "cpf": null,
-    "rg": null,
-    "passport_number": null,
-    "passport_expiration": null,
-    "gender": null,
-    "business_phone": "49368990000",
-    "home_phone": "4936222190",
-    "mobile_phone": "4991782812",
-    "cnpj": "74982815000150",
-    "state_inscription": "1234567890",
-    "city_inscription": "1234567890",
-    "phone": null,
-    "fax": null,
-    "email": "usuario@monde.com.br",
-    "website": "https://www.site.com.br",
-    "observations": "nothing to note",
-    "image": null,
-    "type": "J"
-  }
-}
-```
-
-- Status code de alteração: `200 Ok`
-- A resposta contém o cadastro alterado
-- Status code de erro de validação: `422 Unprocessable Entity`
-
-Caso algum erro de validação ocorra, será retornado o seguinte JSON:
-
-```
-{
-  errors: {
-    [
-      "Nome não pode ficar em branco",
-      "Nome deve conter ao menos 6 dígitos",
-      "CPF é inválido"
-    ]
-  }
-}
-```
-
-## GET /api/v1/people/:id
-
-Busca uma pessoa pelo seu código identificador, retornando o seguinte JSON:
-
-```
-{
-  "person": {
-    "name": "Admin",
-    "city_name": "Americana",
-    "company_name": "Company One",
-    "address": "1st Street",
-    "number": "899",
-    "complement": "Casa",
-    "district": "St. John",
-    "zip": "89999000",
-    "birth_date": "2016-04-05",
-    "cpf": null,
-    "rg": null,
-    "passport_number": null,
-    "passport_expiration": null,
-    "gender": null,
-    "business_phone": "49368990000",
-    "home_phone": "4936222190",
-    "mobile_phone": "4991782812",
-    "cnpj": "74982815000150",
-    "state_inscription": "1234567890",
-    "city_inscription": "1234567890",
-    "phone": null,
-    "fax": null,
-    "email": "usuario@monde.com.br",
-    "website": "https://www.site.com.br",
-    "observations": "nothing to note",
-    "image": null,
-    "type": "J"
-  }
-}
-```
-
-- Status code de busca: `200 OK`
-- Status code de não encontrado: `404 Not Found`
-
-## DELETE /api/v1/people/:id
-
-Apaga o cadastro de pessoa pelo seu código identificador.
-
-- Status code de exclusão: `204 No Content`
-- Status code de não encontrado: `404 Not Found`
+#### Usuários
+- **[<code>GET</code> users](v1/users/GET_users.md)**
