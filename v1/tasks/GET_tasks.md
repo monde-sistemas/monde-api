@@ -74,9 +74,9 @@ Retorna as tarefas cadastradas.
   }],
   "meta": {
     "pagination": {
-      "per_page": 1,
-      "total_pages": 4,
-      "total_objects": 4
+      "per_page": 50,
+      "total_pages": 1,
+      "total_objects": 2
     }
   }
 }
