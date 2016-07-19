@@ -6,11 +6,12 @@
 - **number** - Numeração sequêncial da tarefa, **integer**
 - **assignee_id** - Código do responsável, **guid**
 - **due** - Data de vencimento, **timestamp**
+- **done** - Concluída, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
 - **registered_at** - Data de cadastro, **timestamp**
 - **category** - Categoria da tarefa, **string**
 
-## Categoria de Tarefas
+## Categorias de Tarefa
 - **description** - Descrição da categoria, **string**
 
 ## Histórico de tarefa
@@ -19,4 +20,4 @@
 - **date_time** - Momento do histórico, **timestamp**
 - **person_id** - Pessoa que criou o histórico, **guid**
 - **text** - Mensagem de histórico, **string**
-- **history** - Contéudo alterado na tarefa, **string** 
+- **history** - Contéudo alterado na tarefa, **string**
