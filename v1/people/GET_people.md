@@ -20,10 +20,10 @@ Retorna as pessoas cadastradas.
     GET /api/v1/people?filter=valor-da-pesquisa
   ```
 
-  - **users_only** -  Quando `true` retorna todos as pessoas que são usuários:
+  - **only_users** -  Quando `true` retorna todos as pessoas que são usuários:
 
   ```
-    GET /api/v1/people?users_only=true
+    GET /api/v1/people?only_users=true
   ```
 
   - **page** - navega entre a paginação:
