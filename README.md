@@ -8,9 +8,14 @@ Deve ser adicionado o content type JSON ao Header da requisição:
 Content-Type: application/json; charset=utf-8
 ```
 
-## Endpoints
+## <code>V1</code>
 
-### v1
+### Formatos
+- **[Pessoas](v1/full_format.md#pessoas)**
+- **[Tarefas](v1/full_format.md#tarefas)**
+- **[Categorias de Tarefa](v1/full_format.md#categorias-de-tarefa)**
+
+### Endpoints
 
 #### Autenticação
 - **[<code>POST</code> auth/auth_token](v1/authentication/POST_auth_token.md)**
@@ -30,8 +35,5 @@ Content-Type: application/json; charset=utf-8
 - **[<code>PUT</code> tasks/:id](v1/tasks/PUT_tasks_edit.md)**
 - **[<code>DELETE</code> tasks/:id](v1/tasks/DELETE_tasks.md)**
 
-#### Categorias de Tarefas
+#### Categorias de Tarefa
 - **[<code>GET</code> task_categories](v1/task_categories/GET_task_categories.md)**
-
-#### Usuários
-- **[<code>GET</code> users](v1/users/GET_users.md)**

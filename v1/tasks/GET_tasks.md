@@ -31,6 +31,7 @@ Retorna as tarefas cadastradas.
   ```
     GET api/v1/tasks?page=1&per_page=5
   ```
+
 ***
 
 ## Formato de retorno
@@ -39,16 +40,10 @@ Retorna as tarefas cadastradas.
 
 ***
 
-## Erros
-  Status code:
-  - **401** - Não autenticado
-
-***
-
 ## Exemplo
   **Requisição (Auth: JWT)**
 
-    https://web.monde.com.br/api/v1/tasks
+    GET https://web.monde.com.br/api/v1/tasks
 
   **Resposta**
 ``` json
@@ -58,6 +53,7 @@ Retorna as tarefas cadastradas.
     "title": "Verificar Notificação",
     "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
     "due": "2016-06-30 19:27:08.644424",
+    "done": false,
     "completed_at": "",
     "registered_at": "2016-07-01 19:27:08.651402",
     "category": "Geral",
@@ -67,6 +63,7 @@ Retorna as tarefas cadastradas.
     "title": "Verificar E-mails",
     "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
     "due": "2016-06-30 19:27:08.644424",
+    "done":  true,
     "completed_at": "2016-07-10 10:07:08.213221",
     "registered_at": "2016-07-01 19:27:08.651402",
     "category": "Geral",
@@ -81,3 +78,10 @@ Retorna as tarefas cadastradas.
   }
 }
 ```
+
+***
+
+## Erros
+  Status code:
+  - **401** - Não autenticado
+
