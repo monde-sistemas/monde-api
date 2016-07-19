@@ -64,8 +64,7 @@ Cria um cadastro de tarefa.
     "category": "Feedback",
     "done": false,
     "task_historics": [{
-      "text": "First comment",
-      "historic": "'Pessoa' alterado de 'John' para 'Steve'"
+      "text": "First comment"
     }]
   }
 }

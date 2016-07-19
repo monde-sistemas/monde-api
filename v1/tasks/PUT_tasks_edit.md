@@ -65,8 +65,7 @@ Altera um cadastro de tarefa através do `id` de cadastro.
     "category": "Feedback",
     "done": false,
     "task_historics": [{
-      "text": "First comment",
-      "historic": "'Pessoa' alterado de 'John' para 'Steve'"
+      "text": "First comment"
     }]
   }
 }
