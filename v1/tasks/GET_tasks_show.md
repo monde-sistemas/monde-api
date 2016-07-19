@@ -35,6 +35,7 @@ Retorna uma tarefa especifica através do `id` de cadastro.
   {
     "task": {
       "id" : "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
+      "number": 1
       "title": "Verificar Notificação",
       "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
       "due": "2016-06-30 19:27:08.644424",
@@ -42,7 +43,14 @@ Retorna uma tarefa especifica através do `id` de cadastro.
       "completed_at": "",
       "registered_at": "2016-07-01 19:27:08.651402",
       "category": "Geral",
-      "history_tasks_ids": [1,2]
+      "task_historics": [{
+        "id": "{F45D41F9-EA1E-4A69-8A05-278B15AFC456}",
+        "task_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
+        "date_time": "2016-06-30 19:27:08.844424",
+        "person_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}"
+        "text": "First comment",
+        "historic": "'Pessoa' alterado de 'John' para 'Steve'"
+      }]
     }
   }
   ```
