@@ -31,7 +31,7 @@ Content-Type: application/json; charset=utf-8
 - **[<code>DELETE</code> tasks/:id](v1/tasks/DELETE_tasks.md)**
 
 #### Categorias de Tarefas
-- **[<code>GET</code> category_tasks]()**
+- **[<code>GET</code> task_categories](v1/task_categories/GET_task_categories.md)**
 
 #### Usuários
 - **[<code>GET</code> users](v1/users/GET_users.md)**
