@@ -8,7 +8,7 @@ Retorna as tarefas cadastradas.
 ***
 
 ## Autenticação
-**[JWT](v1/authentication/POST_auth_token.md)**
+**[JWT](../authentication/POST_auth_token.md)**
 
 ***
 
@@ -35,7 +35,7 @@ Retorna as tarefas cadastradas.
 
 ## Formato de retorno
 
-  Veja [formato completo](v1/full_format.md#tarefas)
+  Veja [formato completo](../full_format.md#tarefas)
 
 ***
 
@@ -74,9 +74,9 @@ Retorna as tarefas cadastradas.
   }],
   "meta": {
     "pagination": {
-      "per_page": 1,
-      "total_pages": 4,
-      "total_objects": 4
+      "per_page": 50,
+      "total_pages": 1,
+      "total_objects": 2
     }
   }
 }

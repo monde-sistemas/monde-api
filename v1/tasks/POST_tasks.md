@@ -8,7 +8,7 @@ Cria um cadastro de tarefa.
 ***
 
 ## Autenticação
-**[JWT](v1/authentication/POST_auth_token.md)**
+**[JWT](../authentication/POST_auth_token.md)**
 
 ***
 

@@ -8,7 +8,7 @@ Altera um cadastro de tarefa através do `id` de cadastro.
 ***
 
 ## Autenticação
-**[JWT](v1/authentication/POST_auth_token.md)**
+**[JWT](../authentication/POST_auth_token.md)**
 
 ***
 
