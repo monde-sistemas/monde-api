@@ -27,7 +27,7 @@ Retorna as tarefas cadastradas.
   ```
 
   - **assigned** - Filtra por como o usuário é vinculado a tarefa (`user_tasks`: `tarefas do usuário`,
-  `creator`: `criada pelo usuário`):
+  `author`: `criada pelo usuário`):
 
   ```
     GET api/v1/tasks?assigned=user_tasks
