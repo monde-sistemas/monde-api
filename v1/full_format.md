@@ -36,6 +36,7 @@
 - **title** - Título da tarefa, **string**
 - **number** - Numeração sequêncial da tarefa, **integer**
 - **assignee_id** - Código do responsável, **guid**
+- **person_id** - Pessoa relacionada a tarefa, **guid**
 - **due** - Data de vencimento, **timestamp**
 - **done** - Concluída, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
