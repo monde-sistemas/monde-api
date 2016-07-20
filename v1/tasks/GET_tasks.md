@@ -26,6 +26,14 @@ Retorna as tarefas cadastradas.
     GET api/v1/tasks?situation=done
   ```
 
+  - **assigned** - Filtra por como o usuário é vinculado a tarefa (`user_tasks`: `tarefas do usuário`,
+  `creator`: `criada pelo usuário`):
+
+  ```
+    GET api/v1/tasks?assigned=user_tasks
+    GET api/v1/tasks?assigned=creator
+  ```
+
   - **page** - navega entre a paginação:
 
   ```
@@ -59,6 +67,7 @@ Retorna as tarefas cadastradas.
     "number": 1,
     "title": "Verificar Notificação",
     "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+    "person_id": "{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
     "due": "2016-06-30 19:27:08.644424",
     "done": false,
     "completed_at": "",
@@ -76,6 +85,7 @@ Retorna as tarefas cadastradas.
     "id" : "{C73D41F9-EA1E-4A77-8A05-278B15AFC233}",
     "title": "Verificar E-mails",
     "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+    "person_id": "",
     "due": "2016-06-30 19:27:08.644424",
     "done":  true,
     "completed_at": "2016-07-10 10:07:08.213221",
@@ -98,4 +108,3 @@ Retorna as tarefas cadastradas.
 ## Erros
   Status code:
   - **401** - Não autenticado
-
