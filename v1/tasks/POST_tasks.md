@@ -19,6 +19,9 @@ Cria um cadastro de tarefa.
 - **due** - Data de vencimento, **timestamp**
 - **category** - Categoria da tarefa, **string**
 - **done** - Concluída, **boolean**
+- **task_historics** - Históricos de tarefas:
+  - **text** - Mensagem de histórico, **string**
+  - **historic** - Registro do contéudo alterado na tarefa, **string**
 
 ***
 
@@ -33,8 +36,13 @@ Cria um cadastro de tarefa.
 - **completed_at** - Data de conclusão, **timestamp**
 - **registered_at** - Data de cadastro, **timestamp**
 - **category** - Categoria da tarefa, **string**
-
-
+- **task_historics** - Históricos de tarefas:
+  - **id** - Código identificador do histórico da tarefa, **guid**
+  - **task_id** - Código identificador da tarefa, **guid**
+  - **date_time** - Momento do histórico, **timestamp**
+  - **person_id** - Pessoa que criou o histórico, **guid**
+  - **text** - Mensagem de histórico, **string**
+  - **historic** - Registro do contéudo alterado na tarefa, **string**
 
 #### Status de retorno
 
@@ -51,10 +59,13 @@ Cria um cadastro de tarefa.
 {
   "task": {
     "title": "Task One",
-    "assignee_id": "",
-    "due": "",
+    "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+    "due": "2016-06-30 19:27:08.644424",
     "category": "Feedback",
-    "done": false
+    "done": false,
+    "task_historics": [{
+      "text": "First comment"
+    }]
   }
 }
 ```
@@ -71,7 +82,14 @@ Cria um cadastro de tarefa.
     "completed_at": "",
     "registered_at": "2016-07-01 19:27:08.651402",
     "category": "Geral",
-    "history_tasks_ids": null
+    "task_historics": [{
+      "id": "{F45D41F9-EA1E-4A69-8A05-278B15AFC456}",
+      "task_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
+      "date_time": "2016-06-30 19:27:08.844424",
+      "person_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+      "text": "First comment",
+      "historic": "'Pessoa' alterado de 'John' para 'Steve'"
+    }]
   }
 }
 ```

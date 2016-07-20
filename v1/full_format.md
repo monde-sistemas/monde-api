@@ -51,4 +51,4 @@
 - **date_time** - Momento do histórico, **timestamp**
 - **person_id** - Pessoa que criou o histórico, **guid**
 - **text** - Mensagem de histórico, **string**
-- **history** - Contéudo alterado na tarefa, **string**
+- **historic** - Registro do contéudo alterado na tarefa, **string**
