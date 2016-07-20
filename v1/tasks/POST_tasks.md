@@ -16,12 +16,12 @@ Cria um cadastro de tarefa.
 
 - **title** - Título da tarefa, **string**
 - **assignee_id** - Código do responsável, **guid**
+- **person_id** - Pessoa relacionada a tarefa, **guid**
 - **due** - Data de vencimento, **timestamp**
 - **category** - Categoria da tarefa, **string**
 - **done** - Concluída, **boolean**
 - **task_historics** - Históricos de tarefas:
   - **text** - Mensagem de histórico, **string**
-  - **historic** - Registro do contéudo alterado na tarefa, **string**
 
 ***
 
@@ -31,6 +31,7 @@ Cria um cadastro de tarefa.
 - **title** - Título da tarefa, **string**
 - **number** - Numeração sequêncial da tarefa, **integer**
 - **assignee_id** - Código do responsável, **guid**
+- **person_id** - Pessoa relacionada a tarefa, **guid**
 - **due** - Data de vencimento, **timestamp**
 - **done** - Concluída, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
@@ -60,6 +61,7 @@ Cria um cadastro de tarefa.
   "task": {
     "title": "Task One",
     "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+    "person_id": "{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
     "due": "2016-06-30 19:27:08.644424",
     "category": "Feedback",
     "done": false,
@@ -77,6 +79,7 @@ Cria um cadastro de tarefa.
     "id" : "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
     "title": "Verificar Notificação",
     "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+    "person_id": "{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
     "due": "2016-06-30 19:27:08.644424",
     "done": false,
     "completed_at": "",
