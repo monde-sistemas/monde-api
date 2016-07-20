@@ -13,6 +13,7 @@ Content-Type: application/json; charset=utf-8
 ### Formatos
 - **[Pessoas](v1/full_format.md#pessoas)**
 - **[Tarefas](v1/full_format.md#tarefas)**
+- **[Históricos de tarefa](v1/full_format.md#histórico-de-tarefa)**
 - **[Categorias de Tarefa](v1/full_format.md#categorias-de-tarefa)**
 
 ### Endpoints
