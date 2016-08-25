@@ -32,7 +32,7 @@ Excluí uma pessoa através do `id` de cadastro.
 
 **Requisição (Auth: JWT)**
 
-        DELETE https://web.monde.com.br/api/v1/pessoa/{C73D41F9-EA1E-4A69-8A05-278B15AFC233}
+        DELETE https://web.monde.com.br/api/v1/people/{C73D41F9-EA1E-4A69-8A05-278B15AFC233}
 
 ***
 
