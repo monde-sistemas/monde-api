@@ -38,7 +38,7 @@
 - **assignee_id** - Código do responsável, **guid**
 - **person_id** - Pessoa relacionada a tarefa, **guid**
 - **due** - Data de vencimento, **timestamp**
-- **open** - Tarefa aberta/visualizada pelo responsável, **boolean**
+- **visualized** - Tarefa foi visualizada pelo responsável, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
 - **registered_at** - Data de cadastro, **timestamp**
 - **category** - Categoria da tarefa, **string**
