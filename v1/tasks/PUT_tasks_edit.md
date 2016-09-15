@@ -20,7 +20,7 @@ Altera um cadastro de tarefa através do `id` de cadastro.
 - **person_id** - Pessoa relacionada a tarefa, **guid**
 - **due** - Data de vencimento, **timestamp**
 - **category** - Categoria da tarefa, **string**
-- **done** - Concluída, **boolean**
+- **open** - Tarefa aberta/visualizada pelo responsável, **boolean**
 - **task_historics** - Históricos de tarefas:
   - **text** - Mensagem de histórico, **string**
 
@@ -34,7 +34,7 @@ Altera um cadastro de tarefa através do `id` de cadastro.
 - **assignee_id** - Código do responsável, **guid**
 - **person_id** - Pessoa relacionada a tarefa, **guid**
 - **due** - Data de vencimento, **timestamp**
-- **done** - Concluída, **boolean**
+- **open** - Tarefa aberta/visualizada pelo responsável, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
 - **registered_at** - Data de cadastro, **timestamp**
 - **category** - Categoria da tarefa, **string**
@@ -65,7 +65,7 @@ Altera um cadastro de tarefa através do `id` de cadastro.
     "person_id": "{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
     "due": "2016-06-30 19:27:08.644424",
     "category": "Feedback",
-    "done": false,
+    "open": false,
     "task_historics": [{
       "text": "First comment"
     }]
@@ -82,7 +82,7 @@ Altera um cadastro de tarefa através do `id` de cadastro.
     "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
     "person_id": "{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
     "due": "2016-06-30 19:27:08.644424",
-    "done": false,
+    "open": false,
     "completed_at": "",
     "registered_at": "2016-07-01 19:27:08.651402",
     "category": "Geral",
