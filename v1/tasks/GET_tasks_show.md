@@ -40,7 +40,7 @@ Retorna uma tarefa especifica através do `id` de cadastro.
       "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
       "person_id": "{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
       "due": "2016-06-30 19:27:08.644424",
-      "open": false,
+      "visualized": false,
       "completed_at": "",
       "registered_at": "2016-07-01 19:27:08.651402",
       "category": "Geral",
