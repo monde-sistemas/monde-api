@@ -101,7 +101,7 @@ Retorna as tarefas cadastradas.
     "assignee": {
       "id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
       "name": "Nome do responsável"
-    }
+    },
     "person": null,
     "task_historics": []
   }],
