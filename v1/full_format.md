@@ -35,8 +35,12 @@
 - **id** - Código identificador da tarefa, **guid**
 - **title** - Título da tarefa, **string**
 - **number** - Numeração sequêncial da tarefa, **integer**
-- **assignee_id** - Código do responsável, **guid**
-- **person_id** - Pessoa relacionada a tarefa, **guid**
+- **assignee** - Responsável da tarefa
+  - **id** - Código identificador, **guid**
+  - **name** - Nome do responsável, **string**
+- **person** - Pessoa relacionada a tarefa
+  - **id** - Código identificador, **guid**
+  - **name** - Nome da pessoa, **string**
 - **due** - Data de vencimento, **timestamp**
 - **visualized** - Tarefa foi visualizada pelo responsável, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
@@ -50,6 +54,8 @@
 - **id** - Código identificador do histórico da tarefa, **guid**
 - **task_id** - Código identificador da tarefa, **guid**
 - **date_time** - Momento do histórico, **timestamp**
-- **person_id** - Pessoa que criou o histórico, **guid**
+- **person** - Pessoa que criou o histórico
+  - **id** - Código identificador, **guid**
+  - **name** - Nome do responsável, **string**
 - **text** - Mensagem de histórico, **string**
 - **historic** - Registro do contéudo alterado na tarefa, **string**

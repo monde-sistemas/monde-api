@@ -66,31 +66,43 @@ Retorna as tarefas cadastradas.
     "id" : "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
     "number": 1,
     "title": "Verificar Notificação",
-    "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
-    "person_id": "{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
     "due": "2016-06-30 19:27:08.644424",
     "visualized": false,
     "completed_at": "",
     "registered_at": "2016-07-01 19:27:08.651402",
     "category": "Geral",
+    "assignee": {
+      "id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+      "name": "Nome do responsável"
+    },
+    "person": {
+      "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
+      "name": "Nome do cliente"
+    },
     "task_historics": [{
       "id": "{F45D41F9-EA1E-4A69-8A05-278B15AFC456}",
       "task_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
       "date_time": "2016-06-30 19:27:08.844424",
-      "person_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+      "person": {
+        "id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+        "name": "Nome do criador do histórico"
+      },
       "text": "First comment",
       "historic": "'Pessoa' alterado de 'John' para 'Steve'"
     }]
   }, {
     "id" : "{C73D41F9-EA1E-4A77-8A05-278B15AFC233}",
     "title": "Verificar E-mails",
-    "assignee_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
-    "person_id": "",
     "due": "2016-06-30 19:27:08.644424",
     "visualized":  true,
     "completed_at": "2016-07-10 10:07:08.213221",
     "registered_at": "2016-07-01 19:27:08.651402",
     "category": "Geral",
+    "assignee": {
+      "id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+      "name": "Nome do responsável"
+    }
+    "person": null,
     "task_historics": []
   }],
   "meta": {
