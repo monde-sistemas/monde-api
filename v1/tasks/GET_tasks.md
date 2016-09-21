@@ -31,7 +31,7 @@ Retorna as tarefas cadastradas.
 
   ```
     GET api/v1/tasks?assigned=user_tasks
-    GET api/v1/tasks?assigned=creator
+    GET api/v1/tasks?assigned=author
   ```
 
   - **page** - navega entre a paginação:
@@ -79,6 +79,10 @@ Retorna as tarefas cadastradas.
       "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
       "name": "Nome do cliente"
     },
+    "author": {
+      "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
+      "name": "Nome do criou a tarefa"
+    },
     "task_historics": [{
       "id": "{F45D41F9-EA1E-4A69-8A05-278B15AFC456}",
       "task_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
@@ -103,6 +107,10 @@ Retorna as tarefas cadastradas.
       "name": "Nome do responsável"
     },
     "person": null,
+    "author": {
+      "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
+      "name": "Nome do criou a tarefa"
+    },
     "task_historics": []
   }],
   "meta": {
@@ -120,3 +128,4 @@ Retorna as tarefas cadastradas.
 ## Erros
   Status code:
   - **401** - Não autenticado
+  - **403** - Não autorizado 

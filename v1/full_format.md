@@ -41,6 +41,9 @@
 - **person** - Pessoa relacionada a tarefa
   - **id** - Código identificador, **guid**
   - **name** - Nome da pessoa, **string**
+- **author** - Pessoa que criou a tarefa
+  - **id** - Código identificador, **guid**
+  - **name** - Nome da pessoa, **string**
 - **due** - Data de vencimento, **timestamp**
 - **visualized** - Tarefa foi visualizada pelo responsável, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
