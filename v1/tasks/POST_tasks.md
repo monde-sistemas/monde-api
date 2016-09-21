@@ -36,6 +36,9 @@ Cria um cadastro de tarefa.
 - **person** - Pessoa relacionada a tarefa
   - **id** - Código identificador, **guid**
   - **name** - Nome da pessoa, **string**
+- **author** - Pessoa que criou a tarefa
+  - **id** - Código identificador, **guid**
+  - **name** - Nome da pessoa, **string**
 - **due** - Data de vencimento, **timestamp**
 - **visualized** - Tarefa foi visualizada pelo responsável, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
@@ -97,6 +100,10 @@ Cria um cadastro de tarefa.
       "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
       "name": "Nome do cliente"
     },
+    "author": {
+      "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
+      "name": "Nome do quem criou a tarefa"
+    },
     "task_historics": [{
       "id": "{F45D41F9-EA1E-4A69-8A05-278B15AFC456}",
       "task_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
@@ -127,4 +134,5 @@ Cria um cadastro de tarefa.
 
   Status code:
   - **401** - Não autenticado
+  - **403** - Não autorizado
   - **422** - Unprocessable Entity.

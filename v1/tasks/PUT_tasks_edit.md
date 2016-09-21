@@ -37,6 +37,9 @@ Altera um cadastro de tarefa através do `id` de cadastro.
 - **person** - Pessoa relacionada a tarefa
   - **id** - Código identificador, **guid**
   - **name** - Nome da pessoa, **string**
+- **author** - Pessoa que criou a tarefa
+  - **id** - Código identificador, **guid**
+  - **name** - Nome da pessoa, **string**
 - **due** - Data de vencimento, **timestamp**
 - **visualized** - Tarefa foi visualizada pelo responsável, **boolean**
 - **completed_at** - Data de conclusão, **timestamp**
@@ -98,6 +101,10 @@ Altera um cadastro de tarefa através do `id` de cadastro.
       "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
       "name": "Nome do cliente"
     },
+    "author": {
+      "id":"{R22Q02F9-FH1E-4A69-1P12-278B15AFC634}",
+      "name": "Nome de quem criou a tarefa"
+    },
     "task_historics": [{
       "id": "{F45D41F9-EA1E-4A69-8A05-278B15AFC456}",
       "task_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
@@ -128,4 +135,5 @@ Altera um cadastro de tarefa através do `id` de cadastro.
 
   Status code:
   - **401** - Não autenticado
+  - **403** - Não autorizado
   - **422** - Unprocessable Entity.

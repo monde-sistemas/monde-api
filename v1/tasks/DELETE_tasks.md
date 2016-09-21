@@ -48,4 +48,5 @@ Excluí uma tarefa através do `id` de cadastro.
 
   Status code:
   - **401** - Não autenticado
+  - **403** - Não autorizado
   - **404** - Registro não encontrado.
