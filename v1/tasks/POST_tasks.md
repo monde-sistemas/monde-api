@@ -113,7 +113,7 @@ Cria um cadastro de tarefa.
         "name": "Nome do criador do histórico"
       },
       "text": "First comment",
-      "historic": "'Pessoa' alterado de 'John' para 'Steve'"
+      "historic": null
     }]
   }
 }

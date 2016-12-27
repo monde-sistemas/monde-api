@@ -84,15 +84,25 @@ Retorna as tarefas cadastradas.
       "name": "Nome do criou a tarefa"
     },
     "task_historics": [{
-      "id": "{F45D41F9-EA1E-4A69-8A05-278B15AFC456}",
-      "task_id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC233}",
-      "date_time": "2016-06-30 19:27:08.844424",
+      "id": "{39D51EEE-1E10-4124-93E9-1D1CEB948E83}",
+      "date_time": "2016-06-27T10:44:58.328-02:00",
+      "task_id": "{59B03700-9F30-4C12-BAAC-0C0913028FF6}",
+      "person": {
+        "id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
+        "name": "Nome do criador do histórico"
+      },
+      "text": null,
+      "historic": "'Pessoa' alterado de 'John' para 'Steve'"
+    },{
+      "id": "{4A7843BC-23B5-416F-B716-C0E58D0D6C80}",
+      "date_time": "2016-06-27T10:44:58.328-02:00",
+      "task_id": "{59B03700-9F30-4C12-BAAC-0C0913028FF6}",
       "person": {
         "id": "{C73D41F9-EA1E-4A69-8A05-278B15AFC244}",
         "name": "Nome do criador do histórico"
       },
       "text": "First comment",
-      "historic": "'Pessoa' alterado de 'John' para 'Steve'"
+      "historic": null
     }]
   }, {
     "id" : "{C73D41F9-EA1E-4A77-8A05-278B15AFC233}",
