@@ -46,6 +46,12 @@ Retorna as tarefas cadastradas.
     GET api/v1/tasks?page=1&per_page=5
   ```
 
+  - **due_until** - Seleciona as tarefas que vencem até aquela data limite, o parâmetro `today` vai demonstrar todas as tarefas que vencem até o fim do dia de hoje
+
+  ```
+    GET api/v1/tasks?page=1&per_page=1&due_until=today
+  ```
+
 ***
 
 ## Formato de retorno
@@ -138,4 +144,4 @@ Retorna as tarefas cadastradas.
 ## Erros
   Status code:
   - **401** - Não autenticado
-  - **403** - Não autorizado 
+  - **403** - Não autorizado
