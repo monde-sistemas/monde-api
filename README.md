@@ -40,3 +40,8 @@ Content-Type: application/json; charset=utf-8
 
 #### Categorias de Tarefa
 - **[<code>GET</code> task_categories](v1/task_categories/GET_task_categories.md)**
+
+#### Vendas I
+- **[<code>GET</code> imported_sales](v1/imported_sales/GET_imported_sales.md)**
+- **[<code>GET</code> imported_sales/:id](v1/imported_sales/GET_imported_sales_show.md)**
+- **[<code>POST</code> imported_sales/refresh](v1/imported_sales/POST_imported_sales_refresh.md)**

@@ -62,3 +62,11 @@
   - **name** - Nome do responsável, **string**
 - **text** - Mensagem de histórico, **string**
 - **historic** - Registro do contéudo alterado na tarefa, **string**
+
+## Vendas Importadas
+- **id** - Código da venda, **uuid**
+- **integration_id** - Código da integração, **uuid**
+- **date** - Data da venda, **date**
+- **passenger** - Passageiro, **string**
+- **document** - Documento de identificação, **string**
+- **data** - Dados importados, **json**
