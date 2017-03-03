@@ -16,8 +16,8 @@ Retorna as vendas importadas.
 
 ``` json
   {
-    date: "2017-03-30",
-    integration_id: "7a41d0fa-d904-460b-85a9-2ff47a3e7cba"
+    "date": "2017-03-30",
+    "integration_id": "7a41d0fa-d904-460b-85a9-2ff47a3e7cba"
   }
 ```
 
