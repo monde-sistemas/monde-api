@@ -70,3 +70,7 @@
 - **passenger** - Passageiro, **string**
 - **document** - Documento de identificação, **string**
 - **data** - Dados importados, **json**
+
+## Processos Assíncronos
+- **status** - Status do processo (processing, done, error, internal_error) , **string**
+- **error** - Descrição do erro quando disponível (HTTP 422), **string**

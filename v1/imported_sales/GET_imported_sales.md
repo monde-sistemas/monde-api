@@ -25,6 +25,12 @@ Retorna as vendas importadas.
   ```
     GET api/v1/imported_sales?integration_id=67de30f7-4b84-4c34-845d-6f471c0e50a3
   ```
+  
+- **documento** - Filtra pelo documento da integração:
+
+  ```
+    GET api/v1/imported_sales?document=AI6WDP
+  ```
 
 ***
 
