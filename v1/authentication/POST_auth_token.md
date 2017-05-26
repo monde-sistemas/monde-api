@@ -10,7 +10,8 @@ Esse método autentica o usuário e retorna o token de acesso caso o acesso seja
 {
   "auth": {
     "login": "usuário@endereco.monde.com.br",
-    "password": "senha"
+    "password": "senha",
+    "client": "mobile/desktop"
   }
 }
 ```
