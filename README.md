@@ -48,3 +48,7 @@ Content-Type: application/json; charset=utf-8
 
 #### Processos assíncronos
 - **[<code>GET</code> async_process/:id](v1/async_process/GET_async_process_show.md)**
+
+#### Arquivos
+- **[<code>POST</code>file](v1/file/POST_file.md)**
+- **[<code>GET</code>file](v1/file/GET_file.md)**
