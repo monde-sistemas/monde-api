@@ -1,8 +1,16 @@
-# Documentação da API do Monde
+API do Monde "beta"
+===================
+
+Seja bem-vindo a documentaço da API do Monde! Se você quer desenvolver alguma integração com o Monde, está no lugar certo. Nossa API é bem recente e ainda dá acesso a poucas partes do sistema, mas pretendemos ir expandindo ela priorizando a necessidade dos clientes.
+
+Apesar da simplicidade atual da API, ela já é usada dentro da Monde por todos os nossos aplicativos, principalmente para iOS e Android, mas também por nosso aplicativo Windows, portanto fique tranquilo que a API é uma iniciativa bem séria pra gente e trabalhamos duro para mantê-la o mais estável possível.
+
+Como ainda estamos em fase beta, a documentação está menos detalhada do que gostaríamos, portanto se tiver dúvidas ou precisar de qualquer ajuda, [crie uma issue](../../issues) aqui no próprio repositório que responderemos o mais breve possível.
+
+Fazendo as requisições
+----------------------
 
 Endereço da API: https://web.monde.com.br/api
-
-Dúvidas ou problemas na API crie uma issue em: [monde-api-doc/issues](https://github.com/monde-sistemas/monde-api-doc/issues)
 
 Deve ser adicionado o content type JSON ao Header da requisição:
 
