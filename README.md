@@ -2,7 +2,7 @@
 
 Endereço da API: https://web.monde.com.br/api
 
-Repositório da API: [monde-sistemas/monde-web](https://github.com/monde-sistemas/monde-web)
+Dúvidas ou problemas na API crie uma issue em: [monde-api-doc/issues](https://github.com/monde-sistemas/monde-api-doc/issues)
 
 Deve ser adicionado o content type JSON ao Header da requisição:
 
