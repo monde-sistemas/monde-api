@@ -124,7 +124,7 @@ Para análise dos erros da API veja o `código de resposta HTTP`, abaixo alguns 
 - **301**: Redirecionamento (veja se o caminho está correto ou analise a documentação para saber se o seu endpoint não foi alterado)
 - **401**: Não autorizado (seu usuário ou senha estão errados ou seu token pode ter expirado)
 - **403**: Não permitida essa ação
-- **404**: Não encontrado (possivelmente você errou o endpoint, ou algum header do endpoit)
+- **404**: Não encontrado (possivelmente você errou o endpoint, ou algum header do endpoit, ou o registro no eciste)
 - **422**: Erro na validação dos dados
 - **500**: Algum problema pode estar acontecendo nos nossos servidores, nos avise que tentaremos resolver o mais rápido possível.
 
