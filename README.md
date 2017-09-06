@@ -18,7 +18,7 @@ A API segue um estilo REST, e usa JSON para todas as requisições. Algumas info
 Fazendo uma requisição
 ----------------------
 
-O processo se dá em dois passos: **Autenticação** e **Requisição**. Sendo que a Autenticação não precisa ser realizada todo momento, e pode ser realizado apenas quando o token expirar.
+O processo se dá em dois passos: **Autenticação** e **Requisição**. Sendo que a Autenticação não precisa ser realizada todo momento, e pode ser realizado apenas quando o token expirar(a cada 1 hora).
 
 ##### Passo 1 - Autenticação:
 
