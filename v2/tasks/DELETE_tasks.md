@@ -1,6 +1,6 @@
 # Tarefa
 
-    DELETE api/v1/tasks/:id
+    DELETE api/v2/tasks/:id
 
 ## Descrição
 Excluí uma tarefa através do `id` de cadastro.
@@ -8,7 +8,7 @@ Excluí uma tarefa através do `id` de cadastro.
 ***
 
 ## Autenticação
-**[JWT](../authentication/POST_auth_token.md)**
+**[JWT](../authentication/POST_tokens.md)**
 
 ***
 
@@ -18,22 +18,16 @@ Excluí uma tarefa através do `id` de cadastro.
 
 ***
 
-## Formato de retorno
-
-  Não possui.
-
-#### Status de retorno
-
-    204 - No Content
-
-***
-
 ## Exemplo
 
-**Requisição (Auth: JWT)**
+  **Requisição (Auth: JWT)**
 
-        DELETE https://web.monde.com.br/api/v1/tasks/{C73D41F9-EA1E-4A69-8A05-278B15AFC233}
+    DELETE https://web.monde.com.br/api/v2/tasks/C73D41F9-EA1E-4A69-8A05-278B15AFC233
 
+  #### Status de retorno
+
+    204 - No Content
+    
 ***
 
 ## Erros

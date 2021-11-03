@@ -2,34 +2,32 @@
 
 ## Pessoas
 - **id** - Código identificador da pessoa, **guid**
-- **name** - Nome da pessoa, **string**
-- **city_name** - Nome da cidade, **string**
-- **company_name** - Razão social, **string**
+- **name** - Nome completo da pessoa, **string**
+- **city** - Cidade em que reside., **relationship**
+- **company-name** - Razão social, **string**
 - **address** - Endereço, **string**
 - **number** - Número do endereço, **string**
 - **complement** - Complemento do endereço, **string**
 - **district** - Bairro, **string**
 - **zip** - CEP, **string**
-- **birth_date** - Data de nascimento, **date**
+- **birth-date** - Data de nascimento, **date**
 - **cpf** - CPF, **string**
 - **rg** - RG, **string**
-- **passport_number** - Número do passaporte, **string**
-- **passport_expiration** - Data vencimento do passaporte, **date**
+- **passport-number** - Número do passaporte, **string**
+- **passport-expiration** - Data vencimento do passaporte, **date**
 - **gender** - sexo, **string**
-- **business_phone** - Telefone comercial, **string**
-- **home_phone** - Telefone residencial, **string**
-- **mobile_phone** - Telefone celular, **string**
+- **business-phone** - Telefone comercial, **string**
+- **phone** - Telefone de contato da pessoa, **string**
+- **mobile-phone** - Telefone celular, **string**
 - **cnpj** - CNPJ, **string**
-- **state_inscription** - Inscrição estadual, **string**
-- **city_inscription** - Inscrição municipal, **string**
-- **phone** - Telefone, **string**
-- **fax** - Fax, **string**
-- **email** - E-mail, **string**
-- **website** - Site, **string**
+- **state-inscription** - Inscrição estadual, **string**
+- **city-inscription** - Inscrição municipal, **string**
+- **email** - E-mail de contato, **string**
+- **website** - Web site, **string**
 - **observations** - Observações, **string**
 - **registered_at** - Data de registro, **timestamp**
 - **registered_by** - Quem registrou, **guid**
-- **type** - Tipo de cadastro, **string**
+- **kind** - Tipo de cadastro, **string**
 
 ## Tarefas
 - **id** - Código identificador da tarefa, **guid**
@@ -46,9 +44,9 @@
   - **name** - Nome da pessoa, **string**
 - **due** - Data de vencimento, **timestamp**
 - **visualized** - Tarefa foi visualizada pelo responsável, **boolean**
-- **completed_at** - Data de conclusão, **timestamp**
-- **registered_at** - Data de cadastro, **timestamp**
-- **category** - Categoria da tarefa, **string**
+- **completed-at** - Data de conclusão, **timestamp**
+- **registered-at** - Data de cadastro, **timestamp**
+- **category** - Categoria da tarefa, **relationship**
 
 ## Categorias de Tarefa
 - **description** - Descrição da categoria, **string**

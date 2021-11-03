@@ -7,7 +7,7 @@
 ***
 
 ## Autenticação
-**[JWT](v1/authentication/POST_auth_token.md)**
+**[JWT](v1/authentication/POST_tokens.md)**
 
 ***
 
@@ -16,27 +16,16 @@
 
 ***
 
-## Formato de retorno
-  Campos:
-
-  - **campo_1** - descrição
-  - **campo_2** - descrição
-***
-
-## Erros
-  Status code:
-  - **401** - Não autenticado
-  - **403** - Não permitido
-  - **404** - Não encontrado
-
-***
-
 ## Exemplo
   **Requisição**
 
-    https://web.monde.com.br/api/v1/recurso
+    https://web.monde.com.br/api/v2/recurso
 
   **Resposta**
+
+  #### Status de retorno
+    200 - Ok
+
   ``` json
   {
     "recurso": {
@@ -44,3 +33,11 @@
     }
   }
   ```
+  
+***
+
+## Erros
+  Status code:
+  - **401** - Não autenticado
+  - **403** - Não permitido
+  - **404** - Não encontrado

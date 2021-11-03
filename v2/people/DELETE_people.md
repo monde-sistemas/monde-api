@@ -1,14 +1,14 @@
 # Pessoa
 
-    DELETE /api/v1/people/:id
+    DELETE /api/v2/people/:id
 
 ## Descrição
-Excluí uma pessoa através do `id` de cadastro.
+Exclui uma pessoa através do `id` de cadastro.
 
 ***
 
 ## Autenticação
-**[JWT](../authentication/POST_auth_token.md)**
+**[JWT](../authentication/POST_tokens.md)**
 
 ***
 
@@ -18,21 +18,16 @@ Excluí uma pessoa através do `id` de cadastro.
 
 ***
 
-## Formato de retorno
-
-  Não possui.
-
-#### Status de retorno
-
-    204 - No Content
-
-***
-
 ## Exemplo
 
-**Requisição (Auth: JWT)**
+  **Requisição (Auth: JWT)**
+  
+    DELETE https://web.monde.com.br/api/v2/people/C73D41F9-EA1E-4A69-8A05-278B15AFC233
+ 
+  **Resposta**
+  #### Status de retorno
 
-        DELETE https://web.monde.com.br/api/v1/people/{C73D41F9-EA1E-4A69-8A05-278B15AFC233}
+    204 - No Content
 
 ***
 
@@ -41,7 +36,11 @@ Excluí uma pessoa através do `id` de cadastro.
   ``` json
   {
     "errors": [
-      "Registro não encontrado"
+      {
+        "title": "Recurso não encontrado", "detail": "Recurso informado não encontrado",
+        "code": "404",
+        "status": "404"
+      }
     ]
   }
   ```
