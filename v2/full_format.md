@@ -16,59 +16,74 @@
 - **passport-number** - Número do passaporte, **string**
 - **passport-expiration** - Data vencimento do passaporte, **date**
 - **gender** - sexo, **string**
-- **business-phone** - Telefone comercial, **string**
-- **phone** - Telefone de contato da pessoa, **string**
-- **mobile-phone** - Telefone celular, **string**
 - **cnpj** - CNPJ, **string**
-- **state-inscription** - Inscrição estadual, **string**
 - **city-inscription** - Inscrição municipal, **string**
-- **email** - E-mail de contato, **string**
-- **website** - Web site, **string**
+- **state-inscription** - Inscrição estadual, **string**
 - **observations** - Observações, **string**
 - **registered_at** - Data de registro, **timestamp**
-- **registered_by** - Quem registrou, **guid**
+- **business-phone** - Telefone comercial, **string**
+- **mobile-phone** - Telefone celular, **string**
+- **phone** - Telefone de contato da pessoa, **string**
+- **email** - E-mail de contato, **string**
+- **website** - Web site, **string**
+- **code** - Código, **string**
 - **kind** - Tipo de cadastro, **string**
 
 ## Tarefas
 - **id** - Código identificador da tarefa, **guid**
 - **title** - Título da tarefa, **string**
 - **number** - Numeração sequêncial da tarefa, **integer**
-- **assignee** - Responsável da tarefa
-  - **id** - Código identificador, **guid**
-  - **name** - Nome do responsável, **string**
-- **person** - Pessoa relacionada a tarefa
-  - **id** - Código identificador, **guid**
-  - **name** - Nome da pessoa, **string**
-- **author** - Pessoa que criou a tarefa
-  - **id** - Código identificador, **guid**
-  - **name** - Nome da pessoa, **string**
 - **due** - Data de vencimento, **timestamp**
 - **visualized** - Tarefa foi visualizada pelo responsável, **boolean**
 - **completed-at** - Data de conclusão, **timestamp**
 - **registered-at** - Data de cadastro, **timestamp**
-- **category** - Categoria da tarefa, **relationship**
+- **category** - Categoria
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
+- **assignee** - Responsável da tarefa
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
+- **person** - Pessoa relacionada a tarefa
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
+- **author** - Pessoa que criou a tarefa
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
+- **task-historics** - Histórico da tarefa
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
 
 ## Categorias de Tarefa
 - **description** - Descrição da categoria, **string**
+- **tasks** - Tarefas relacionada a categoria
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
 
 ## Histórico de tarefa
 - **id** - Código identificador do histórico da tarefa, **guid**
 - **task_id** - Código identificador da tarefa, **guid**
-- **date_time** - Momento do histórico, **timestamp**
-- **person** - Pessoa que criou o histórico
-  - **id** - Código identificador, **guid**
-  - **name** - Nome do responsável, **string**
+- **date-time** - Momento do histórico, **timestamp**
 - **text** - Mensagem de histórico, **string**
 - **historic** - Registro do contéudo alterado na tarefa, **string**
+- **task** - Tarefa relacionada ao histórico da tarefa
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
+- **person** - Pessoa relacionada a histórico da tarefa
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
 
-## Vendas Importadas
+## Cidades
 - **id** - Código da venda, **uuid**
-- **integration_id** - Código da integração, **uuid**
-- **date** - Data da venda, **date**
-- **passenger** - Passageiro, **string**
-- **document** - Documento de identificação, **string**
-- **data** - Dados importados, **json**
-
-## Processos Assíncronos
-- **status** - Status do processo (processing, done, error, internal_error) , **string**
-- **error** - Descrição do erro quando disponível (HTTP 422), **string**
+- **name** - Nome da cidade, **string**
+- **people** - Pessoas relacionadas a cidade
+  - **links**
+    - **self** - Link para o próprio relacionamento, **link**
+    - **related** - Link para o recurso relacionado, **link**
