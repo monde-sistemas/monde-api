@@ -70,7 +70,7 @@ Retorna todos os cadastros, paginados em 50 registros
 ***
 
 ## Erros
-Os erros possuem um status code especifico, geralmente com alguma mensagem de erro no formato:
+Os erros possuem um status code específico, geralmente com alguma mensagem de erro no formato:
 ``` json
 {
   "errors": [

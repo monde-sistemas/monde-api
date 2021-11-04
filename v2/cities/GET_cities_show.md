@@ -20,7 +20,7 @@ Busca um cadastro através do seu código identificador(id)
 
 ## Formato de retorno
 
-  Veja [formato completo](v1/full_format.md#cidades)
+  Veja [formato completo](../full_format.md#cidades)
 
 ***
 
@@ -60,7 +60,7 @@ Busca um cadastro através do seu código identificador(id)
 ***
 
 ## Erros
-Os erros possuem um status code especifico, geralmente com alguma mensagem de erro no formato:
+Os erros possuem um status code específico, geralmente com alguma mensagem de erro no formato:
 ``` json
 {
   "errors": [

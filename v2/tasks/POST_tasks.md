@@ -124,7 +124,7 @@ Cria um cadastro de tarefa.
 ***
 
 ## Erros
-Os erros possuem um status code especifico, geralmente com alguma mensagem de erro no formato:
+Os erros possuem um status code específico, geralmente com alguma mensagem de erro no formato:
 ``` json
 {
   "errors": [
