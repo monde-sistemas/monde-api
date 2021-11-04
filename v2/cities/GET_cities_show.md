@@ -20,7 +20,7 @@ Busca um cadastro através do seu código identificador(id)
 
 ## Formato de retorno
 
-  Veja [formato completo](v1/full_format.md#task-categories)
+  Veja [formato completo](v1/full_format.md#cidades)
 
 ***
 

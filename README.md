@@ -148,35 +148,41 @@ Formatos
 - **[Tarefas](v2/full_format.md#tarefas)**
 - **[Históricos de tarefa](v2/full_format.md#histórico-de-tarefa)**
 - **[Categorias de Tarefa](v2/full_format.md#categorias-de-tarefa)**
+- **[Cidades](v2/full_format.md#cidades)**
 
 Endpoints da API
 ----------------------------------
 
-#### Autenticação
-> Para autenticar no sistema e obter o Token
+> Autenticação
 
-- **[<code>POST</code> api/v2/tokents](v2/authentication/POST_tokents.md)**
+- **[<code>POST</code> api/v2/tokents](v2/authentication/POST_tokens.md)**
 
-### Pessoas
-> Trata as interações com Pessoas
-
+> Pessoas
 - **[<code>GET</code> people](v2/people/GET_people.md)** - Lista as pessoas
 - **[<code>GET</code> people/:id](v2/people/GET_people_show.md)** - Visualiza os dados da pessoa com o ID `:id`
 - **[<code>POST</code> people](v2/people/POST_people.md)** - Cria um novo cadastro de pessoa
-- **[<code>PUT</code> people/:id](v2/people/PUT_people_edit.md)** - Altera o cadastro da pessoa com ID `:id`
+- **[<code>PATCH</code> people/:id](v2/people/PATCH_people_edit.md)** - Altera o cadastro da pessoa com ID `:id`
 - **[<code>DELETE</code> people/:id](v2/people/DELETE_people.md)** - Deleta a pessoa de ID `:id`
 
 
-#### Tarefas
-> Trata as interações com as Tarefas
-
+> Tarefas
 - **[<code>GET</code> tasks](v2/tasks/GET_tasks.md)** - Lista as tarefas
 - **[<code>GET</code> tasks/:id](v2/tasks/GET_tasks_show.md)** - Visualiza os dados da tarefa com o ID `:id`
 - **[<code>POST</code> tasks](v2/tasks/POST_tasks.md)** - Cria um novo cadastro de tarefa
-- **[<code>PUT</code> tasks/:id](v2/tasks/PUT_tasks_edit.md)** - Altera o cadastro da tarefa com ID `:id`
+- **[<code>PATCH</code> tasks/:id](v2/tasks/PATCH_tasks_edit.md)** - Altera o cadastro da tarefa com ID `:id`
 - **[<code>DELETE</code> tasks/:id](v2/tasks/DELETE_tasks.md)** - Deleta a tarefa de ID `:id`
 
-#### Categorias de Tarefa
-> Trata sobre as categorias das Tarefas
+> Categorias de Tarefa
+- **[<code>GET</code> task-categories](v2/task_categories/GET_task_categories.md)** - Lista as categorias de tarefas
+- **[<code>GET</code> task-categories/:id](v2/task_categories/GET_task_categories_show.md)** - Visualiza os dados da categoria com o ID `:id`
 
-- **[<code>GET</code> task_categories](v2/task_categories/GET_task_categories.md)** - Lista as categorias de tarefas
+> Histórico de Tarefas
+- **[<code>GET</code> task-historics](v2/task_historics/GET_task_historics.md)** - Lista o histórico da tarefa
+- **[<code>GET</code> task-historics/:id](v2/task_historics/GET_task_historics_show.md)** - Visualiza os dados de um histórico da tarefa com o ID `:id`
+- **[<code>POST</code> task-historics](v2/task_historics/POST_task_historics.md)** - Cria um novo cadastro de histórico da tarefa
+- **[<code>PATCH</code> task-historics/:id](v2/task_historics/PATCH_task_historics_edit.md)** - Altera o cadastro do histórico da tarefa com ID `:id`
+- **[<code>DELETE</code> task-historics/:id](v2/task_historics/DELETE_task_historics.md)** - Deleta o histórico da tarefa de ID `:id`
+
+> Cidades
+- **[<code>GET</code> cities](v2/cities/GET_cities.md)** - Lista as Cidades
+- **[<code>GET</code> cities/:id](v2/cities/GET_cities_show.md)** - Visualiza os dados da cidade com o ID `:id`
