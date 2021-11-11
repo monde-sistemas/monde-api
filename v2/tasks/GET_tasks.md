@@ -52,6 +52,17 @@ Retorna as tarefas cadastradas.
   ```
     GET api/v2/tasks?filter[due_until]=today
   ```
+  - **include** - Carrega relacionamentos específicos
+  
+  ```
+    GET api/v2/tasks?include=assignee,person,category
+  ```
+
+  - **fields** - Carrega campos específicos
+
+  ```
+    GET api/v2/tasks?fields[people]=name
+  ```
 
 ***
 
@@ -64,7 +75,7 @@ Retorna as tarefas cadastradas.
 ## Exemplo
   **Requisição (Auth: JWT)**
 
-    GET https://web.monde.com.br/api/v2/tasks
+    GET https://web.monde.com.br/api/v2/tasks?include=assignee,person,category&fields[people]=name
 
   **Resposta**
 
@@ -75,61 +86,113 @@ Retorna as tarefas cadastradas.
   {
     "data": [
       {
-        "id": "54850eaf-b4d4-4a33-96f1-361a844bec08",
+        "id": "07971a1b-638f-4d91-a9f1-a947c3192ce1",
         "type": "tasks",
         "links": {
-          "self": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08"
+          "self": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1"
         },
         "attributes": {
-          "title": "Repudiandae officiis eveniet eos.",
-          "number": 3670,
-          "due": "2021-10-29T00:00:00.000-03:00",
+          "title": "Beatae eaque ad nihil.",
+          "number": 106,
+          "due": "2021-11-11T15:04:49.398-03:00",
           "visualized": false,
           "completed": false,
           "completed-at": null,
-          "registered-at": "2021-10-28T16:37:14.787-03:00"
+          "registered-at": "2021-11-11T15:04:49.432-03:00"
         },
         "relationships": {
           "category": {
             "links": {
-              "self": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/relationships/category",
-              "related": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/category"
+              "self": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/relationships/category",
+              "related": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/category"
+            },
+            "data": {
+              "type": "task-categories",
+              "id": "Geral"
             }
           },
           "person": {
             "links": {
-              "self": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/relationships/person",
-              "related": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/person"
+              "self": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/relationships/person",
+              "related": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/person"
+            },
+            "data": {
+              "type": "people",
+              "id": "734a5103-5c11-4053-9897-ab0fb3187997"
             }
+          }
+        },
+        "assignee": {
+          "links": {
+            "self": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/relationships/assignee",
+            "related": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/assignee"
           },
-          "assignee": {
-            "links": {
-              "self": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/relationships/assignee",
-              "related": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/assignee"
-            }
-          },
-          "author": {
-            "links": {
-              "self": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/relationships/author",
-              "related": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/author"
-            }
-          },
-          "task-historics": {
-            "links": {
-              "self": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/relationships/task-historics",
-              "related": "http://web.monde.com.br/api/v2/tasks/54850eaf-b4d4-4a33-96f1-361a844bec08/task-historics"
-            }
+          "data": {
+            "type": "people",
+            "id": "dd917eb1-db45-4795-852d-ab41dc324030"
+          }
+        },
+        "author": {
+          "links": {
+            "self": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/relationships/author",
+            "related": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/author"
+          }
+        },
+        "task-historics": {
+          "links": {
+            "self": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/relationships/task-historics",
+            "related": "http://web.monde.com.br/api/v2/tasks/07971a1b-638f-4d91-a9f1-a947c3192ce1/task-historics"
           }
         }
       }
     ],
+    "included": [
+      {
+        "id": "Geral",
+        "type": "task-categories",
+        "links": {
+          "self": "http://web.monde.com.br/api/v2/task-categories/Geral"
+        },
+        "attributes": {
+          "description": "Geral"
+        },
+        "relationships": {
+          "tasks": {
+            "links": {
+              "self": "http://web.monde.com.br/api/v2/task-categories/Geral/relationships/tasks",
+              "related": "http://web.monde.com.br/api/v2/task-categories/Geral/tasks"
+            }
+          }
+        }
+      },
+      {
+        "id": "734a5103-5c11-4053-9897-ab0fb3187997",
+        "type": "people",
+        "links": {
+          "self": "http://web.monde.com.br/api/v2/people/734a5103-5c11-4053-9897-ab0fb3187997"
+        },
+        "attributes": {
+          "name": "Maria"
+        } 
+      },
+      {
+        "id": "dd917eb1-db45-4795-852d-ab41dc324030",
+        "type": "people",
+        "links": {
+          "self": "http://web.monde.com.br/api/v2/people/dd917eb1-db45-4795-852d-ab41dc324030"
+        },
+        "attributes": {
+          "name": "Admin"
+        }
+      }
+    ],
     "links": {
-      "first": "http://web.monde.com.br/api/v2/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=50",
-      "last": "http://web.monde.com.br/api/v2/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=50"
+      "first": "http://web.monde.com.br/api/v2/tasks?fields%5Bpeople%5D=name&include=assignee%2Cperson%2Ccategory&page%5Bnumber%5D=1&page%5Bsize%5D=50",
+      "last": "http://web.monde.com.br/api/v2/tasks?fields%5Bpeople%5D=name&include=assignee%2Cperson%2Ccategory&page%5Bnumber%5D=1&page%5Bsize%5D=50"
     }
   }
   ```
-  
+
 ***
 
 ## Erros
