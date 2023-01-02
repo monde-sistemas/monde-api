@@ -15,6 +15,7 @@ Cria um cadastro de tarefa.
 ## Parâmetros
 - **type** - *Obrigatório* -	Tipo do recurso. Deve ser informado sempre como `tasks`.
 - **attributes[title]** - *Obrigatório* -	Título da tarefa
+- **attributes[description]**	Descrição da tarefa
 - **attributes[due]** - *Obrigatório* -	Data de vencimento
 - **attributes[completed]**	Finaliza a tarefa
 - **relationships[category]** - *Obrigatório* -	Categoria da tarefa
@@ -34,6 +35,7 @@ Cria um cadastro de tarefa.
       "type": "tasks",
       "attributes": {
         "title": "Task One",
+        "description": "Teste",
         "due": "2021-10-30T16:37:15.298-03:00",
         "completed": true
       },
@@ -83,7 +85,8 @@ Cria um cadastro de tarefa.
         "visualized": true,
         "completed": true,
         "completed-at": "2021-10-28T16:37:15.314-03:00",
-        "registered-at": "2021-10-28T16:37:15.323-03:00"
+        "registered-at": "2021-10-28T16:37:15.323-03:00",
+        "description": "Teste"
       },
       "relationships": {
         "category": {
