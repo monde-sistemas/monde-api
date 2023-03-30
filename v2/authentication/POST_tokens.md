@@ -3,13 +3,14 @@
     POST api/v2/tokens
 
 ## Descrição
-Esse método autentica o usuário e retorna o token de acesso caso o acesso seja válido.
+Esse método autentica o usuário e retorna o token de acesso caso o acesso seja válido. O usuário utilizado precisa ter [permissão de acesso total](https://monde.movidesk.com/kb/article/226178/permissoes-de-acesso) ao sistema.
+
 É realizada por token (JWT), seguindo a RFC 7591.
 
 ## Parâmetros
 
 - **type** - *Obrigatório* -	Tipo do recurso e deve ser sempre <code>auth</code>.
-- **attributes[login]** - *Obrigatório* -	Login e endereço do usuário, ex: admin@suaagencia.monde.com.br (Para descobrir qual seu endereço veja https://link.monde.com.br/administracao-desktop-endereco-sistema.html)
+- **attributes[login]** - *Obrigatório* -	Login e endereço do usuário, ex: admin@suaagencia.monde.com.br (Para descobrir qual seu endereço veja [este artigo](https://monde.movidesk.com/kb/article/222415/descobrindo-o-endereco-de-acesso-ao-sistema))
 - **attributes[password]** - *Obrigatório* -	Senha do usuário.
 - **attributes[platform]** -	Plataforma que está acessando a API. Ex: "desktop", "mobile" e "web" (Padrão: "mobile")
 
