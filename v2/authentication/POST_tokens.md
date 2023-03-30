@@ -10,7 +10,7 @@ Esse método autentica o usuário e retorna o token de acesso caso o acesso seja
 ## Parâmetros
 
 - **type** - *Obrigatório* -	Tipo do recurso e deve ser sempre <code>auth</code>.
-- **attributes[login]** - *Obrigatório* -	Login e endereço do usuário, ex: admin@suaagencia.monde.com.br (Para descobrir qual seu endereço veja [nosso artigo](https://monde.movidesk.com/kb/article/222415/descobrindo-o-endereco-de-acesso-ao-sistema))
+- **attributes[login]** - *Obrigatório* -	Login e endereço do usuário, ex: admin@suaagencia.monde.com.br (Para descobrir qual seu endereço veja [este artigo](https://monde.movidesk.com/kb/article/222415/descobrindo-o-endereco-de-acesso-ao-sistema))
 - **attributes[password]** - *Obrigatório* -	Senha do usuário.
 - **attributes[platform]** -	Plataforma que está acessando a API. Ex: "desktop", "mobile" e "web" (Padrão: "mobile")
 
