@@ -14,10 +14,10 @@ Retorna as pessoas cadastradas.
 
 ## Parâmetros
 
-  - **filter[search]** -Filtra cadastros de pessoas. Suporta pesquisa pelo `nome`, `razão social`, `cpf` e `cnpj`:
+  - **filter[search]** -Filtra cadastros de pessoas. Suporta pesquisa pelo `nome`, `razão social`, `cpf`, `cnpj` e `telefone`:
 
   ```
-    GET /api/v2/tasks?filter[search]=Maria
+    GET /api/v2/people?filter[search]=Maria
   ```
 
   - **filter[only_users]** -  Quando `true` retorna todos as pessoas que são usuários:
