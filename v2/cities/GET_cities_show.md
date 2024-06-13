@@ -43,7 +43,8 @@ Busca um cadastro através do seu código identificador(id)
         "self": "http://web.monde.com.br/api/v2/cities/ab1ea4f9-21a9-4d0f-b630-dc1dbc94dc6f"
       },
       "attributes": {
-        "name": "Americana"
+        "name": "Americana",
+        "state-acronym": "SP"
       },
       "relationships": {
         "people": {

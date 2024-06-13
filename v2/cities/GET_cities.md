@@ -48,7 +48,8 @@ Retorna todos os cadastros, paginados em 50 registros
           "self": "http://web.monde.com.br/api/v2/cities/0884d127-80bf-466f-a0a9-3f0a9f351576"
         },
         "attributes": {
-          "name": "Americana"
+          "name": "Americana",
+          "state-acronym": "SP"
         },
         "relationships": {
           "people": {
