@@ -12,14 +12,13 @@ Esse método autentica o usuário e retorna o token de acesso caso o acesso seja
 - **type** - *Obrigatório* -	Tipo do recurso e deve ser sempre <code>auth</code>.
 - **attributes[login]** - *Obrigatório* -	Login e endereço do usuário, ex: admin@suaagencia.monde.com.br (Para descobrir qual seu endereço veja [este artigo](https://link.monde.com.br/administracao-desktop-endereco-sistema.html))
 - **attributes[password]** - *Obrigatório* -	Senha do usuário.
-- **attributes[platform]** -	Plataforma que está acessando a API. Ex: "desktop", "mobile" e "web" (Padrão: "mobile")
 
 ## Exemplo
 
   **Requisição (Auth: JWT)**
 
     POST https://web.monde.com.br/api/v2/tokens
-  
+
   ``` json
   {
     "data": {
@@ -33,7 +32,7 @@ Esse método autentica o usuário e retorna o token de acesso caso o acesso seja
   ```
 
   **Resposta**
-    
+
   #### Status de retorno
 
     200 - Ok
