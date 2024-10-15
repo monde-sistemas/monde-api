@@ -24,7 +24,7 @@ Esse método autentica o usuário e retorna o token de acesso caso o acesso seja
     "data": {
       "type": "tokens",
       "attributes": {
-        "login": "admin@mondesistemas.monde.com.br",
+        "login": "admin@suaagencia.monde.com.br",
         "password": "u4K2EJwGFL"
       }
     }
