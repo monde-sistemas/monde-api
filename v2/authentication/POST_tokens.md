@@ -9,7 +9,7 @@ Esse método autentica o usuário e retorna o token de acesso caso o acesso seja
 
 ## Parâmetros
 
-- **type** - *Obrigatório* -	Tipo do recurso e deve ser sempre <code>auth</code>.
+- **type** - *Obrigatório* -	Tipo do recurso e deve ser sempre <code>tokens</code>.
 - **attributes[login]** - *Obrigatório* -	Login do usuário e endereço utilizado para a configuração do Monde. Para descobrir o endereço correto da sua agência, consulte [este artigo](https://link.monde.com.br/administracao-desktop-endereco-sistema.html)). Exemplo: `admin@suaagencia.monde.com.br`.
 - **attributes[password]** - *Obrigatório* -	Senha do usuário.
 
