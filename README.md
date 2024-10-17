@@ -18,11 +18,11 @@ O processo se dá em dois passos: **Autenticação** e **Requisição**. Sendo q
 
 ##### Passo 1 - Autenticação:
 
-Já que o endpoint da autenticação é `api/v2/tokens` Em cURL (para você tentar na sua shell), podemos fazer assim:
+Já que o endpoint da autenticação é [**<code>POST</code> api/v2/tokens**](v2/authentication/POST_tokens.md) Em cURL (para você tentar na sua shell), podemos fazer assim:
 
 
 ```
-curl "https://web.monde.com.br/api/v2/tokens" -d '{ "data": {"type": "tokens", "attributes": {"login": "admin@mondesistemas.monde.com.br","password": "u4K2EJwGFL" } } }' -X POST \
+curl "https://web.monde.com.br/api/v2/tokens" -d '{ "data": {"type": "tokens", "attributes": {"login": "admin@suagencia.monde.com.br","password": "u4K2EJwGFL" } } }' -X POST \
 	-H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiI4MzJkMjFmMS02ZDU0LTQzMjItYWUyNS05M2NkNGJhNzQ5ZmYiLCJpc3N1ZXIiOiJNb25kZSIsInNjaGVtYSI6Im1vbmRlc2lzdGVtYXMiLCJleHAiOjE2MzU0NTM0MzR9.HVW91M7lSA07syCxPPdVJOSi8M7Z9nGQ5ZxPz-JyriA" \
 	-H "Accept: application/vnd.api+json" \
 	-H "Content-Type: application/vnd.api+json"
