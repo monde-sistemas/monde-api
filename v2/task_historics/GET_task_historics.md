@@ -26,6 +26,13 @@ Gerencia os cadastros de históricos de tarefas
     GET api/v2/task-historics?page[number]=1&page[size]=5
   ```
 
+  - **sort** - Ordena os resultados por qualquer atributo. Para ordenar em ordem descendente, adicione um hífen (-) antes do campo:
+
+  ```
+    GET /api/v2/task-historics?sort=text             # Ordena por texto do histórico (A-Z)
+    GET /api/v2/task-historics?sort=-text            # Ordena por texto do histórico (Z-A)
+  ```
+
 ***
 
 ## Formato de retorno
@@ -80,7 +87,7 @@ Gerencia os cadastros de históricos de tarefas
     }
   }
   ```
-  
+
 ***
 
 ## Erros

@@ -20,6 +20,13 @@ Retorna todos os cadastros, paginados em 50 registros
     GET /api/v2/tasks?filter[search]=Amer
   ```
 
+  - **sort** - Ordena os resultados por qualquer atributo. Para ordenar em ordem descendente, adicione um hífen (-) antes do campo:
+
+  ```
+    GET /api/v2/cities?sort=name        # Ordena por nome (A-Z)
+    GET /api/v2/cities?sort=-name       # Ordena por nome (Z-A)
+  ```
+
 ***
 
 ## Formato de retorno
