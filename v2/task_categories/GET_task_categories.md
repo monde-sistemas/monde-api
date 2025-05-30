@@ -13,7 +13,13 @@ Retorna as categorias de tarefas cadastradas.
 ***
 
 ## Parâmetros
-  Não possui
+
+  - **sort** - Ordena os resultados por qualquer atributo. Para ordenar em ordem descendente, adicione um hífen (-) antes do campo:
+
+  ```
+    GET /api/v2/task-categories?sort=description        # Ordena por descrição (A-Z)
+    GET /api/v2/task-categories?sort=-description       # Ordena por descrição (Z-A)
+  ```
 
 ***
 

@@ -38,6 +38,13 @@ Retorna as pessoas cadastradas.
     GET api/v2/people?page[number]=1&page[size]=5
   ```
 
+  - **sort** - Ordena os resultados por qualquer atributo. Para ordenar em ordem descendente, adicione um hífen (-) antes do campo:
+
+  ```
+    GET /api/v2/people?sort=registered-at  # Ordena por data de registro (mais antiga primeiro)
+    GET /api/v2/people?sort=-registered-at # Ordena por data de registro (mais recente primeiro)
+  ```
+
 ***
 
 ## Formato de retorno

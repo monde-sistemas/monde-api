@@ -27,8 +27,8 @@ Retorna as tarefas cadastradas.
   ```
 
   - **assigned** - Filtra por como o usuário é vinculado a tarefa (`user_tasks`: `tarefas do usuário`,
-  `author`: `criada pelo usuário` e `delegated`: `delegadas pelo usuário`):
-  
+  `author`: `criada pelo usuário` e `delegated`: `delegadas pelo usuário`):
+
   ```
     GET api/v2/tasks?filter[assigned]=user_tasks
     GET api/v2/tasks?filter[assigned]=author
@@ -52,8 +52,9 @@ Retorna as tarefas cadastradas.
   ```
     GET api/v2/tasks?filter[due_until]=today
   ```
+
   - **include** - Carrega relacionamentos específicos
-  
+
   ```
     GET api/v2/tasks?include=assignee,person,category
   ```
@@ -62,6 +63,13 @@ Retorna as tarefas cadastradas.
 
   ```
     GET api/v2/tasks?fields[people]=name
+  ```
+
+  - **sort** - Ordena os resultados por qualquer atributo. Para ordenar em ordem descendente, adicione um hífen (-) antes do campo:
+
+  ```
+    GET /api/v2/tasks?sort=title      # Ordena por título (A-Z)
+    GET /api/v2/tasks?sort=-title     # Ordena por título (Z-A)
   ```
 
 ***
@@ -173,7 +181,7 @@ Retorna as tarefas cadastradas.
         },
         "attributes": {
           "name": "Maria"
-        } 
+        }
       },
       {
         "id": "dd917eb1-db45-4795-852d-ab41dc324030",
