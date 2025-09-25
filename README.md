@@ -1,6 +1,6 @@
 # API do Monde
 
-##### Se precisar de ajuda, entre em contato pelo canal de [suporte](https://www.monde.com.br/suporte/).
+##### Se precisar de ajuda, entre em contato pelo canal de [suporte](https://ajuda.monde.com.br/).
 
 ## Sobre a API Versão 2
 A API segue 100% a especificação JSON:API. Algumas informações rápidas para facilitar:
