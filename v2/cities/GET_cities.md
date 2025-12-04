@@ -17,7 +17,7 @@ Retorna todos os cadastros, paginados em 50 registros
   - **filter[search]** - Filtra cadastros de cidades. Suporta pesquisa pelo nome:
 
   ```
-    GET /api/v2/tasks?filter[search]=Amer
+    GET /api/v2/cities?filter[search]=Amer
   ```
 
   - **sort** - Ordena os resultados por qualquer atributo. Para ordenar em ordem descendente, adicione um hífen (-) antes do campo:
