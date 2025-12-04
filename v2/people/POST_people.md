@@ -41,7 +41,7 @@ Cadastrar uma nova Pessoa.
 ## Exemplo
   **Requisição (Auth: JWT)**
 
-    POST https://web.monde.com.br/api/v2/tasks
+    POST https://web.monde.com.br/api/v2/people
 
   ``` json
   {
