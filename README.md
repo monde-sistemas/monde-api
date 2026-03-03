@@ -124,6 +124,32 @@ A resposta da requisição vai parecer com o que está abaixo:
  ***
 
 
+## Limites de Requisição
+
+Para garantir a estabilidade da API, aplicamos limites de requisições (rate limiting) nos endpoints. Os limites atuais são:
+
+- **api/v2/people**: 3 requisições a cada 5 segundos.
+- **api/v2/tokens**: 1 requisição a cada 3 segundos.
+- **Demais endpoints**: 30 requisições a cada 60 segundos.
+
+Ao atingir o limite, a API retornará um erro `429 Too Many Requests` com o seguinte payload:
+
+```json
+{
+  "errors": [
+    {
+      "title": "Limite de requisições excedido",
+      "detail": "Você excedeu o limite de requisições permitidas. Aguarde um momento antes de tentar novamente.",
+      "code": "429",
+      "status": "429"
+    }
+  ]
+}
+```
+
+***
+
+
 ## Erros e Códigos de resposta HTTP
 
 
@@ -137,6 +163,7 @@ Para análise dos erros da API veja o `código de resposta HTTP`, abaixo alguns 
 - **403**: Não permitida essa ação
 - **404**: Não encontrado (possivelmente você errou o endpoint, ou algum header do endpoit, ou o registro no eciste)
 - **422**: Erro na validação dos dados
+- **429**: Limite de requisições excedido (aguarde um momento antes de tentar novamente)
 - **500**: Algum problema pode estar acontecendo nos nossos servidores, nos avise que tentaremos resolver o mais rápido possível.
 
 

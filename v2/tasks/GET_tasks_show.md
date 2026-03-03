@@ -108,3 +108,27 @@ Retorna uma tarefa especifica através do `id` de cadastro.
   - **401** - Não autenticado
   - **403** - Não autorizado
   - **404** - Registro não encontrado.
+
+
+***
+
+## Limite de Requisições
+
+Este endpoint permite **30 requisições a cada 60 segundos**.
+
+Ao atingir o limite, será retornado um erro com status `429 Too Many Requests`.
+
+## Formato do erro de limite de requisições excedido
+
+``` json
+{
+  "errors": [
+    {
+      "title": "Limite de requisições excedido",
+      "detail": "Você excedeu o limite de requisições permitidas. Aguarde um momento antes de tentar novamente.",
+      "code": "429",
+      "status": "429"
+    }
+  ]
+}
+```

@@ -61,3 +61,26 @@ Para fazer uma requisição autenticada para a API, é necessário passar o toke
 ```
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
 ```
+
+***
+
+## Limite de Requisições
+
+Este endpoint permite **1 requisição a cada 3 segundos**.
+
+Ao atingir o limite, será retornado um erro com status `429 Too Many Requests`.
+
+## Formato do erro de limite de requisições excedido
+
+``` json
+{
+  "errors": [
+    {
+      "title": "Limite de requisições excedido",
+      "detail": "Você excedeu o limite de requisições permitidas. Aguarde um momento antes de tentar novamente.",
+      "code": "429",
+      "status": "429"
+    }
+  ]
+}
+```

@@ -73,3 +73,27 @@ Os erros possuem um status code específico, geralmente com alguma mensagem de e
   ]
 }
 ```
+
+
+***
+
+## Limite de Requisições
+
+Este endpoint permite **30 requisições a cada 60 segundos**.
+
+Ao atingir o limite, será retornado um erro com status `429 Too Many Requests`.
+
+## Formato do erro de limite de requisições excedido
+
+``` json
+{
+  "errors": [
+    {
+      "title": "Limite de requisições excedido",
+      "detail": "Você excedeu o limite de requisições permitidas. Aguarde um momento antes de tentar novamente.",
+      "code": "429",
+      "status": "429"
+    }
+  ]
+}
+```

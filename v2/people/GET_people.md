@@ -179,3 +179,27 @@ Retorna as pessoas cadastradas.
 ## Erros
   Status code:
   - **401** - Não autenticado
+  - **404** - Não encontrado.
+
+***
+
+## Limite de Requisições
+
+Este endpoint permite **3 requisições a cada 5 segundos**.
+
+Ao atingir o limite, será retornado um erro com status `429 Too Many Requests`.
+
+## Formato do erro de limite de requisições excedido
+
+``` json
+{
+  "errors": [
+    {
+      "title": "Limite de requisições excedido",
+      "detail": "Você excedeu o limite de requisições permitidas. Aguarde um momento antes de tentar novamente.",
+      "code": "429",
+      "status": "429"
+    }
+  ]
+}
+```

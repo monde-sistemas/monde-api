@@ -32,20 +32,30 @@ Exclui uma pessoa através do `id` de cadastro.
 ***
 
 ## Erros
-  Os erros possuem um status code específico, geralmente com alguma mensagem de erro no formato:
-  ``` json
-  {
-    "errors": [
-      {
-        "title": "Recurso não encontrado", "detail": "Recurso informado não encontrado",
-        "code": "404",
-        "status": "404"
-      }
-    ]
-  }
-  ```
-
   Status code:
   - **401** - Não autenticado
   - **404** - Registro não encontrado.
   - **422** - Erro de validação (ex.: Cadastro possui vínculo com algum outro cadastro, não permitindo excluir)
+
+***
+
+## Limite de Requisições
+
+Este endpoint permite **3 requisições a cada 5 segundos**.
+
+Ao atingir o limite, será retornado um erro com status `429 Too Many Requests`.
+
+## Formato do erro de limite de requisições excedido
+
+``` json
+{
+  "errors": [
+    {
+      "title": "Limite de requisições excedido",
+      "detail": "Você excedeu o limite de requisições permitidas. Aguarde um momento antes de tentar novamente.",
+      "code": "429",
+      "status": "429"
+    }
+  ]
+}
+```
