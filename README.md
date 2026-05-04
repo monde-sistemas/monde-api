@@ -137,8 +137,31 @@ Para análise dos erros da API veja o `código de resposta HTTP`, abaixo alguns 
 - **403**: Não permitida essa ação
 - **404**: Não encontrado (possivelmente você errou o endpoint, ou algum header do endpoit, ou o registro no eciste)
 - **422**: Erro na validação dos dados
+- **429**: Limite de requisições excedido (aguarde antes de tentar novamente)
 - **500**: Algum problema pode estar acontecendo nos nossos servidores, nos avise que tentaremos resolver o mais rápido possível.
 
+
+## Limite de Requisições
+
+A API v2 aplica limites de requisições por IP para proteger a disponibilidade do serviço:
+
+- **Endpoints gerais** (`people`, `tasks`, `cities`, `task-categories`, `task-historics`): **60 requisições a cada 60 segundos**
+- **Autenticação** (`tokens`): **1 requisição a cada 3 segundos**
+
+Quando o limite é excedido, a API retorna HTTP `429 Too Many Requests` com o payload:
+
+```json
+{
+  "errors": [
+    {
+      "title": "Limite de requisições excedido",
+      "detail": "Você excedeu o limite de requisições permitidas. Aguarde um momento antes de tentar novamente.",
+      "code": "429",
+      "status": "429"
+    }
+  ]
+}
+```
 
 Formatos
 -----------------------------

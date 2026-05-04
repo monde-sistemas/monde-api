@@ -157,3 +157,4 @@ Status code:
 - **401** - Não autenticado
 - **403** - Não autorizado
 - **422** - Unprocessable Entity.
+- **429** - Limite de requisições excedido (60 req / 60s)

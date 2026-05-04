@@ -94,3 +94,4 @@ Gerencia os cadastros de históricos de tarefas
   Status code:
   - **401** - Não autenticado
   - **403** - Não autorizado
+  - **429** - Limite de requisições excedido (60 req / 60s)

@@ -61,3 +61,8 @@ Para fazer uma requisição autenticada para a API, é necessário passar o toke
 ```
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
 ```
+
+## Erros
+  Status code:
+  - **401** - Não autenticado (credenciais inválidas ou token expirado)
+  - **429** - Limite de requisições excedido (1 req / 3s)

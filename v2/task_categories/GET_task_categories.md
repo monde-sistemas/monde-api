@@ -73,3 +73,7 @@ Os erros possuem um status code específico, geralmente com alguma mensagem de e
   ]
 }
 ```
+
+  Status code:
+  - **401** - Não autenticado
+  - **429** - Limite de requisições excedido (60 req / 60s)
