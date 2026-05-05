@@ -179,4 +179,4 @@ Retorna as pessoas cadastradas.
 ## Erros
   Status code:
   - **401** - Não autenticado
-  - **429** - Limite de requisições excedido (60 req / 60s)
+  - **429** - Limite de requisições excedido (60 requisições a cada 60 segundos)
