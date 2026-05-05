@@ -102,7 +102,7 @@ Alteração de uma Pessoa.
   - **401** - Não autenticado
   - **403** - Não permitido
   - **404** - Não encontrado
-  - **429** - Limite de requisições excedido (60 req / 60s)
+  - **429** - Limite de requisições excedido (60 requisições a cada 60 segundos)
 
 ***
 
