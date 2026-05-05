@@ -49,3 +49,4 @@ Exclui uma pessoa através do `id` de cadastro.
   - **401** - Não autenticado
   - **404** - Registro não encontrado.
   - **422** - Erro de validação (ex.: Cadastro possui vínculo com algum outro cadastro, não permitindo excluir)
+  - **429** - Limite de requisições excedido (60 req / 60s)
