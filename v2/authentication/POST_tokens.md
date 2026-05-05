@@ -64,5 +64,5 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
 
 ## Erros
   Status code:
-  - **401** - Não autenticado (credenciais inválidas ou token expirado)
+  - **401** - Não autenticado (credenciais inválidas)
   - **429** - Limite de requisições excedido (1 req / 3s)
