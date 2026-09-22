@@ -18,11 +18,12 @@ O processo se dá em dois passos: **Autenticação** e **Requisição**. Sendo q
 
 ##### Passo 1 - Autenticação:
 
+As credenciais são as de um usuário comum do sistema — o mesmo login e senha com que a pessoa entra no Monde, sem credencial exclusiva de API. O `login` é a identificação do usuário mais o endereço do sistema da agência (`admin@suaagencia.monde.com.br`); se a agência já migrou para o login por e-mail, use o e-mail no lugar do login (`agente@viagem.com.br@suaagencia.monde.com.br`). Os detalhes estão em [Como montar o login](v2/authentication/POST_tokens.md#como-montar-o-login).
+
 Já que o endpoint da autenticação é [**<code>POST</code> api/v2/tokens**](v2/authentication/POST_tokens.md) Em cURL (para você tentar na sua shell), podemos fazer assim:
 
-
 ```
-curl "https://web.monde.com.br/api/v2/tokens" -d '{ "data": {"type": "tokens", "attributes": {"login": "admin@suagencia.monde.com.br","password": "u4K2EJwGFL" } } }' -X POST \
+curl "https://web.monde.com.br/api/v2/tokens" -d '{ "data": {"type": "tokens", "attributes": {"login": "admin@suaagencia.monde.com.br","password": "u4K2EJwGFL" } } }' -X POST \
 	-H "Accept: application/vnd.api+json" \
 	-H "Content-Type: application/vnd.api+json"
 ```
