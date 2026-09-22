@@ -5,7 +5,7 @@
 ## Descrição
 Esse método autentica o usuário e retorna o token de acesso caso o acesso seja válido.
 
-**As credenciais usadas aqui são as de um usuário comum do sistema** — o mesmo login e a mesma senha com que a pessoa entra no Monde. Não existe credencial exclusiva de API: basta usar um usuário já existente no cadastro de usuários da própria agência (ou criar um novo por lá, dedicado à integração), não é preciso solicitar nada ao suporte. O usuário utilizado precisa ter [permissão de acesso total](https://monde.movidesk.com/kb/article/226178/permissoes-de-acesso) ao sistema.
+**As credenciais usadas aqui são as de um usuário comum do sistema** — o mesmo login e a mesma senha com que a pessoa entra no Monde. Não existe credencial exclusiva de API: basta usar um usuário já existente no cadastro de usuários da própria agência (ou criar um novo por lá, dedicado à integração). O usuário utilizado precisa ter [permissão de acesso total](https://monde.movidesk.com/kb/article/226178/permissoes-de-acesso) ao sistema.
 
 A autenticação é realizada por token (JWT), seguindo a RFC 7591.
 
